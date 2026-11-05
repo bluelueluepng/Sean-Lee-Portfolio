@@ -15,7 +15,7 @@
     const n = +el.dataset.count;
     for (let i = 1; i <= n; i++) {
       const img = new Image();
-      img.src = `media/${el.dataset.pages}-${String(i).padStart(2, "0")}.jpg`;
+      img.src = `${el.dataset.pages}-${String(i).padStart(2, "0")}.jpg`;
       img.alt = `Rule book page ${i}`;
       img.loading = "lazy";
       img.width = 1800; img.height = 1014;
@@ -66,4 +66,3 @@
   }, { threshold: [0, 0.5, 1] });
   reels.forEach((r) => io.observe(r));
 })();
-
